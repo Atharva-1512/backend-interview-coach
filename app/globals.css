@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import './coach.css';
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Sora:wght@300;400;500;600&display=swap');
 
@@ -98,4 +99,3 @@ main {
   z-index: 1;
 }
 
-@import './coach.css';
