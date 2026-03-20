@@ -89,13 +89,16 @@ Preparing a project for real-world deployment
 🌐 Deploy with backend API support
 
 📸 Demo 
+
+HOMEPAGE
 <p align="center">
   <img src="./public/screenshots/Homepage.png" width="700"/>
 </p>
-
+CHAT SECTION
 <p align="center">
   <img src="./public/screenshots/Chat Section.png" width="700"/>
 </p>
+RESPONSE PAGE
 <p align="center">
   <img src="./public/screenshots/Response.png" width="700"/>
 </p>
