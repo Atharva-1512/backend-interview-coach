@@ -22,22 +22,28 @@ export default function ChatWindow({
   const [draft, setDraft] = useState("");
 
   const placeholder = useMemo(() => {
-    if (!canAnswer) return "Input disabled while the interviewer is thinking…";
-    return "Type your answer…";
+    if (!canAnswer) return "Waiting for interviewer…";
+    return "Type your answer  (Enter to send, Shift+Enter for new line)";
   }, [canAnswer]);
 
   return (
-    <div className="flex h-[75vh] flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/5 shadow-xl">
-      <div className="flex-1 overflow-y-auto p-4">
-        <div className="flex flex-col gap-3">
+    <div className="chat-window">
+      {/* Message list */}
+      <div className="chat-messages">
+        <div className="chat-messages-inner">
           {messages.map((m) => (
             <MessageBubble key={m.id} message={m} />
           ))}
 
           {thinking && (
-            <div className="flex items-start gap-2">
-              <div className="mt-1 h-8 w-8 rounded-full bg-indigo-500/25 ring-1 ring-white/10" />
-              <div className="max-w-[80%] rounded-2xl rounded-tl-md bg-black/30 px-4 py-3 ring-1 ring-white/10">
+            <div className="thinking-row">
+              <div className="avatar avatar--interviewer">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden>
+                  <circle cx="7" cy="5" r="2.5" stroke="currentColor" strokeWidth="1.2"/>
+                  <path d="M2 12.5c0-2.485 2.239-4.5 5-4.5s5 2.015 5 4.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <div className="thinking-bubble">
                 <Loader />
               </div>
             </div>
@@ -47,7 +53,8 @@ export default function ChatWindow({
         </div>
       </div>
 
-      <div className="border-t border-white/10 bg-black/20 p-3">
+      {/* Input area */}
+      <div className="chat-input-area">
         <InputBox
           value={draft}
           onChange={setDraft}
@@ -59,9 +66,10 @@ export default function ChatWindow({
           disabled={!canAnswer}
           placeholder={placeholder}
         />
-        <div className="mt-2 text-xs text-slate-400">
-          Tip: Use a structure like definition → key properties → example/trade-offs.
-        </div>
+        <p className="chat-tip">
+          <span className="chat-tip-icon">💡</span>
+          Structure your answer: definition → key properties → example / trade-offs
+        </p>
       </div>
     </div>
   );
