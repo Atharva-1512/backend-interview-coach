@@ -1,6 +1,6 @@
 🚀 Backend Interview Coach
-
 An interactive AI-powered chatbot designed to help users prepare for backend developer interviews through structured questions, real-time responses, and guided practice.
+
 
 📌 Overview
 
