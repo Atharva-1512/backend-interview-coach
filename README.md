@@ -6,6 +6,8 @@ An interactive AI-powered chatbot designed to help users prepare for backend dev
 
 Backend Interview Coach is a purpose-built chatbot that simulates a technical interview experience. It focuses on backend concepts such as APIs, databases, system design, and coding fundamentals.
 
+Backend Interview Coach is a purpose-built chatbot that simulates a technical interview experience. It focuses on backend concepts such as APIs, databases, system design, and coding fundamentals.
+
 The goal is to provide a focused, distraction-free preparation tool rather than a generic chatbot.
 
 This project was built as part of a backend developer intern assignment to demonstrate frontend architecture, component design, and chatbot interaction logic.
